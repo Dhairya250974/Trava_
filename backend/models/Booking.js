@@ -37,4 +37,4 @@ const bookingSchema = new mongoose.Schema({
     {timestamps : true}     // document kab create hua hai and kab update hua h usko recors karega
 )
 
-export default mongoose.model("Booking", bookingSchema);
+module.exports = mongoose.model("Booking", bookingSchema);

@@ -1,3 +1,3 @@
-const BASE_URL = import.meta.env.VITE_API_URL || "https://trips-travel-server.vercel.app/api";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
 
 export default BASE_URL;

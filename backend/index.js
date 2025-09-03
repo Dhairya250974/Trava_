@@ -40,11 +40,11 @@ dbConnect();
 
 // Middleware for CORS and JSON parsing
 
-
 const allowedOrigins = [
-  "https://trips-travel.vercel.app",
   "http://localhost:5173",
+  "http://localhost:3000"
 ];
+
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -54,6 +54,9 @@ app.use(
         callback(new Error("Not allowed by CORS"));
       }
     },
+    credentials: true, // Allow cookies and credentials
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
   })
 );
 app.use(express.json());

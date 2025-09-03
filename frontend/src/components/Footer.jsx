@@ -1,4 +1,4 @@
-import Logo from "../assets/images/logo3.png";
+import Logo from "../assets/images/mylogo2.jpeg";
 import React, { useContext, useState } from "react";
 import {
   FaFacebookF,
@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <>
       {role === "admin" ? null : (
-        <footer className="bg-gray-800 text-white px-5 py-8">
+        <footer className="bg-black text-white px-5 py-8">
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col items-center mb-4 md:mb-0">
               <img
@@ -25,10 +25,10 @@ const Footer = () => {
                 className="h-20 md:mr-12 "
               />
               <div className="flex flex-col mt-8 text-center md:text-left">
-                <p className="mb-2">Address: 123 Travel St, City, Country</p>
-                <p className="mb-2">Phone: +1 234 567 890</p>
-                <p className="mb-2">Email: info@tripstravels.com</p>
-                <p>&copy; 2024 Trips Travels. All rights reserved.</p>
+                <p className="mb-2">Address: Himachal Pradesh</p>
+                <p className="mb-2">Phone: +91 - 7973448800</p>
+                <p className="mb-2">Email: info@travelwithus.com</p>
+                <p>&copy; 2025 Trips With Us. All rights reserved by Mehak Rana.</p>
               </div>
             </div>
 

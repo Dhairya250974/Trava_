@@ -29,11 +29,13 @@ const Login = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: 'include', // Include cookies
         body: JSON.stringify(formData),
       });
       const result = await response.json();
 
       if (response.ok) {
+        console.log('Login successful:', result);
         dispatch({
           type: "LOGIN_SUCCESS",
           payload: {
@@ -48,10 +50,12 @@ const Login = () => {
           result.role === "admin" ? navigate("/all-booking") : navigate("/");
         }
       } else {
+        console.error('Login failed:', result);
         toast.error(result.message);
       }
     } catch (err) {
-      toast.error("Server not responding");
+      console.error('Network error:', err);
+      toast.error("Server not responding. Please check your connection.");
     }
   };
 

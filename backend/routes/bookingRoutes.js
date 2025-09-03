@@ -11,4 +11,4 @@ router.get('/', getAllBookings);
 router.get('/:id', getBooking);
 router.delete('/:id', deleteBooking);
 
-export default router;
+module.exports = router;

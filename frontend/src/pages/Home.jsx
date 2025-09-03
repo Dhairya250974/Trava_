@@ -28,20 +28,20 @@ const Home = () => {
               <h1 className="text-[33px] font-cursiveFont text-center md:text-[40px] md:text-start font-bold mb-4 ">
                 Plan Your Perfect Trip with{" "}
                 <span className="text-BaseColor text-[40px] font-cursiveFont">
-                  TripsTravel
+                  TravelWithUs
                 </span>
               </h1>
               <p className="text-lg leading-8 text-gray-800 hidden md:block">
-                "Welcome to TripsTravel, your go-to destination for
+                "Welcome to TravelWithUs, your go-to destination for
                 unforgettable adventures! Explore diverse destinations, plan
                 seamlessly, and embark on a journey of a lifetime. Discover
                 handpicked accommodations, connect with like-minded travelers,
                 and create lasting memories. Your next adventure awaits with
-                TripsTravel!"
+                TravelWithUs!"
               </p>
 
               <p className="mobpara md:hidden ">
-                "Welcome to TripsTravel, your go-to destination for
+                "Welcome to TravelWithUs, your go-to destination for
                 unforgettable adventures! Explore diverse destinations, plan
                 seamlessly, and embark on a journey of a lifetime."
               </p>
@@ -93,7 +93,7 @@ const Home = () => {
           </span>
         </h1>
         <p className="text-lg leading-8 mb-8 text-gray-800">
-          "Unveil travel wonders in our gallery, a snapshot of TripsTravel's
+          "Unveil travel wonders in our gallery, a snapshot of TravelWithUs's
           adventures."
         </p>
         <ImagesGallery />

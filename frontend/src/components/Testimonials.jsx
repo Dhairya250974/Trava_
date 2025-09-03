@@ -10,7 +10,7 @@ const Testimonials = () => {
   const testimonialsData = [
     {
       pic: avatar1,
-      name: "John Doe",
+      name: "Dhairya",
       description:
         "Our trip with TripsTravel was nothing short of amazing! The attention to detail, friendly guides, and unforgettable experiences made it truly special. Can't wait for the next adventure!",
     },
@@ -70,7 +70,7 @@ const Testimonials = () => {
   return (
     <Slider {...settings}>
       {testimonialsData.map((data, index) => (
-        <div className=" py-4 px-6">
+        <div className=" py-4 px-6" key={index}>
           <p>{data.description}</p>
           <div className="flex items-center gap-4 mt-8">
             <div className="w-[75px] h-[55px] rounded-md overflow-hidden">

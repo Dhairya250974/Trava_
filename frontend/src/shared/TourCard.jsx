@@ -4,7 +4,16 @@ import { FaStar } from "react-icons/fa";
 import CalculateAvg from "../utils/CalculateAvg";
 
 const TourCard = ({ tour }) => {
-  const { photo, title, city, distance, price, desc, _id, reviews, featured } =
+  // Add safety checks for tour data
+  if (!tour) {
+    return <div className="max-w-sm rounded overflow-hidden shadow-lg h-[400px] flex flex-col">
+      <div className="px-6 py-4 h-full flex items-center justify-center">
+        <p>Loading...</p>
+      </div>
+    </div>;
+  }
+
+  const { photo, title, city, distance, price, desc, _id, reviews = [], featured } =
     tour;
 
   const { totalRating, avgRating } = CalculateAvg(reviews);
@@ -29,17 +38,17 @@ const TourCard = ({ tour }) => {
               <FaStar />
             </i>
             <span>
-              {avgRating} ({reviews.length})
+              {avgRating} ({reviews?.length || 0})
             </span>
           </div>
         </div>
         <div className="font-bold text-lg mb-2 flex flex-col justify-between">
           <Link to={`/tours/${_id}`} className="py-2">
-            {title.length > 20 ? title.substring(0, 20) + "..." : title}
+            {title && title.length > 20 ? title.substring(0, 20) + "..." : title}
           </Link>
 
           <p className="text-gray-700 text-base font-light overflow-hidden overflow-ellipsis">
-            {desc.length > 80 ? desc.substring(0, 80) + "..." : desc}
+            {desc && desc.length > 80 ? desc.substring(0, 80) + "..." : desc}
           </p>
         </div>
       </div>

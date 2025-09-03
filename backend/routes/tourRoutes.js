@@ -16,4 +16,4 @@ router.post('/', verifyToken, verifyAdmin, createTour);
 router.put('/:id', verifyToken, verifyAdmin, updateTour);
 router.delete('/:id', verifyToken, verifyAdmin, deleteTour);
 
-export default router;
+module.exports = router;

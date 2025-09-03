@@ -56,7 +56,7 @@ const verifyUser = (req, res, next) => {
         const paramsId = req.params.id
         const role = req.role;
               
-        if(paramsId === userId || role === 'admin'){
+        if(paramsId === userId || role === 'user'){
             next()
         }
         else{
@@ -97,4 +97,4 @@ const verifyAdmin = (req, res, next) => {
     }
 }
 
-export  {verifyToken, verifyAdmin, verifyUser};
+module.exports = {verifyToken, verifyAdmin, verifyUser};

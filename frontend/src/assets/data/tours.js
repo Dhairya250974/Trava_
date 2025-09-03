@@ -9,13 +9,13 @@ import tourImg07 from "../images/tour-img07.jpg";
 const tours = [
   {
     id: "01",
-    title: "Westminster Bridge",
-    city: "London",
-    address: "Westminster, London, UK",
-    distance: 300,
-    price: 99,
+    title: "Mystical Shangarh: A Himalayan Meadow Retreat",
+    city: "Sainj Valley",
+    address: "Shangarh Village, Sainj Valley, Kullu, Himachal Pradesh 175134",
+    distance: 245,
+    price: 8999,
     maxGroupSize: 10,
-    desc: "this is the description",
+    desc: "Escape to the tranquil heart of the Great Himalayan National Park's ecozone in Shangarh. This hidden gem in the Sainj Valley is famous for its vast, lush green meadows that resemble a divine pasture. Surrounded by dense deodar forests and snow-capped peaks, Shangarh is a paradise for nature lovers, trekkers, and those seeking absolute peace. Discover the unique local culture at the Shangchul Mahadev Temple, a significant architectural marvel where local legends forbid leather goods and loud noises to preserve the sanctity of the deity. Ideal for gentle hikes, photography, and digital detox, a trip to Shangarh is an experience in serenity.",
     reviews: [
       {
         name: "John Doe",
@@ -23,64 +23,64 @@ const tours = [
       },
     ],
     avgRating: 4.5,
-    photo: tourImg01,
-    featured: true,
-  },
-  {
-    id: "02",
-    title: "Bali, Indonesia",
-    city: "Indonesia",
-    address: "Bali, Indonesia",
-    distance: 400,
-    price: 99,
-    maxGroupSize: 8,
-    desc: "this is the description",
-    reviews: [],
-    avgRating: 4.5,
-    photo: tourImg02,
+    photo: "https://res.cloudinary.com/dftdyrkig/image/upload/v1727188757/Screenshot_2024-09-24_200131_sjcs0r.png",
     featured: true,
   },
   {
     id: "03",
-    title: "Snowy Mountains, Thailand",
-    city: "Thailand",
-    address: "Snowy Mountains, Thailand",
-    distance: 500,
-    price: 99,
-    maxGroupSize: 8,
-    desc: "this is the description",
-    reviews: [
-      {
-        name: "John Doe",
-        rating: 4.6,
-      },
-      {
-        name: "Jane Doe",
-        rating: 3.8,
-      },
-    ],
-    avgRating: 4.2,
-    photo: tourImg03,
-    featured: true,
+    title: "Palampur, Himachal Pradesh",
+    city: "Palampur",
+    address: "Palampur, Himachal Pradesh, India",
+    distance: 480,
+    price: 2499,
+    maxGroupSize: 10,
+    desc: "Explore the serene tea gardens and the majestic Dhauladhar mountain range in the beautiful town of Palampur.",
+    reviews: [],
+    avgRating: 4.6,
+    photo: "https://res.cloudinary.com/dftdyrkig/image/upload/v1727193186/plampur_1_gtt4gj.jpg",
+    featured: true
   },
   {
-    id: "04",
-    title: "Beautiful Sunrise, Thailand",
-    city: "Thailand",
-    address: "Thailand",
-    distance: 500,
-    price: 99,
-    maxGroupSize: 8,
-    desc: "this is the description",
-    reviews: [
+    "id": "04",
+    "title": "Khajjiar, Himachal Pradesh",
+    "city": "Chamba",
+    "address": "Khajjiar, Chamba, Himachal Pradesh, India",
+    "distance": 240,
+    "price": 1999,
+    "maxGroupSize": 12,
+    "desc": "Often called the 'Mini Switzerland of India', Khajjiar is a picturesque saucer-shaped plateau surrounded by dense pine and deodar forests.",
+    "reviews": [
       {
-        name: "John Doe",
-        rating: 4.6,
+        "name": "Rohan Sharma",
+        "rating": 5.0
       },
+      {
+        "name": "Priya Verma",
+        "rating": 4.4
+      }
     ],
-    avgRating: 4.5,
-    photo: tourImg04,
-    featured: true,
+    "avgRating": 4.7,
+    "photo": "https://res.cloudinary.com/dftdyrkig/image/upload/v1727283487/Screenshot_2024-09-25_222453_g5qzjp.png",
+    "featured": true
+  },
+  {
+    "id": "05",
+    "title": "Chitkul, Kinnaur",
+    "city": "Chitkul",
+    "address": "Chitkul, Kinnaur, Himachal Pradesh, India",
+    "distance": 390,
+    "price": 7999,
+    "maxGroupSize": 6,
+    "desc": "Visit the last inhabited village near the Indo-Tibetan border, renowned for its stunning Baspa Valley landscapes and traditional wooden houses.",
+    "reviews": [
+      {
+        "name": "Aarav Singh",
+        "rating": 4.8
+      }
+    ],
+    "avgRating": 4.8,
+    "photo": "https://res.cloudinary.com/dftdyrkig/image/upload/v1727283973/Screenshot_2024-09-25_223525_lvqv8z.png",
+    "featured": true
   },
   {
     id: "05",

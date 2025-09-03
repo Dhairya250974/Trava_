@@ -1,6 +1,7 @@
 const express = require("express");
 
 const {createReview, deleteReview} = require("../controllers/reviewController")
+const {verifyUser} = require("../middleware/authMiddleware")
 
 
 
@@ -14,4 +15,4 @@ router.post('/:tourId', verifyUser, createReview);
 // Delete a review by ID
 router.delete('/:id', verifyUser, deleteReview);
 
-export default router;
+module.exports = router;

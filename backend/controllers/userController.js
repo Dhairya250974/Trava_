@@ -4,11 +4,15 @@ const User = require("../models/User");
 const getAllUsers = async (req, res) => {
     try {
         const users = await User.find();
-        res.status(200).json(users);
+        res.status(200).json({
+            success: true,
+            data: users,
+            count: users.length
+        });
     } 
     catch (error) {
         console.error(error);
-        res.status(500).json({ message: 'Internal Server Error' });
+        res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
 }
 
@@ -26,7 +30,7 @@ const getSingleUser = async (req,res) => {
         res.status(200).json({
             success: true,
             data: user
-        })
+        });
     }
     catch(error){
         console.error(error);
@@ -53,6 +57,7 @@ const updateUser = async (req, res) => {
         }
 
         res.status(200).json({
+            success: true,
             message: "User Updated Successfully" , 
             data: newUser
         });
@@ -94,4 +99,4 @@ const deleteUser = async (req, res) =>{
 };
 
 
-export { getAllUsers, getSingleUser, updateUser, deleteUser };
+module.exports = { getAllUsers, getSingleUser, updateUser, deleteUser };

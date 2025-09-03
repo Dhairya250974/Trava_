@@ -17,8 +17,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     pauseOnHover={true}
     closeOnClick={true}
     draggable={true} />
-    <App />
+    <App /> 
     </BrowserRouter>
     </AuthContextProvider>
   </React.StrictMode>,
 )
+

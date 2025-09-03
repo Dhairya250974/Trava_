@@ -1,10 +1,10 @@
-import { timeStamp } from "console";
+const { timeStamp } = require("console");
 
 const Booking = require("../models/Booking")
 
 const createBooking = async(req, res) => {
     try{
-        const { userId, fullName, tourName, totalPrice, phone, date, maxGroupSize} = res.body;
+        const { userId, fullName, tourName, totalPrice, phone, date, maxGroupSize} = req.body;
 
         /* validating all the fields present or not */
         if(!userId || !fullName || !tourName || !totalPrice || !phone || !date || !maxGroupSize){
@@ -27,7 +27,7 @@ const createBooking = async(req, res) => {
         })
         await newBooking.save();
 
-        res.starus(201).json({
+        res.status(201).json({
             success: true,
             message: "Booking created successfully",
             newBooking,
@@ -48,16 +48,21 @@ const getBooking = async(req, res) => {
         const booking = await Booking.find({ userId: bookingId }).sort({ timeStamp: 1});
 
         if(!booking){
-            res.status(404).json({
+            return res.status(404).json({
                 success: false, 
                 message: "Booking Not Found"
             })
         }
+        
+        res.status(200).json({
+            success: true,
+            data: booking
+        });
     } 
     catch(error){
         console.error(error);
         return res.status(500).json({
-            success: true,
+            success: false,
             message: "Internal Server Error"
         })
     }
@@ -105,9 +110,10 @@ const deleteBooking = async (req, res) => {
     catch(error){
         console.error(error);
         res.status(500).json({ 
+            success: false,
             message: "Internal Server Error" 
         });
     }
 }
 
-export { createBooking, getBooking, getAllBookings, deleteBooking };
+module.exports = { createBooking, getBooking, getAllBookings, deleteBooking };

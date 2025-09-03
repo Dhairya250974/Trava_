@@ -23,26 +23,32 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setIsLoading(true)
+    setIsLoading(true);
     try {
       const response = await fetch(`${BASE_URL}/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: 'include', // Include cookies
         body: JSON.stringify(formData),
       });
-      const { message } = await response.json();
-
+      
+      const data = await response.json();
+      
       if (response.ok) {
-        // console.log('User registered successfully:', message);
-        toast.success(message);
+        console.log('User registered successfully:', data);
+        toast.success(data.message || 'Registration successful!');
         navigate("/login");
       } else {
-        toast.error(message);
+        console.error('Registration failed:', data);
+        toast.error(data.message || 'Registration failed');
       }
     } catch (err) {
-      toast.error("Server not responding");
+      console.error('Network error:', err);
+      toast.error("Server not responding. Please check your connection.");
+    } finally {
+      setIsLoading(false);
     }
   };
 

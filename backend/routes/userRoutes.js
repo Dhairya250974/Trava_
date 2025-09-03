@@ -1,8 +1,8 @@
-const exporess = require("express");
+const express = require("express");
 
 const{ getAllUsers, getSingleUser, updateUser, deleteUser } = require("../controllers/userController")
 
-// const{verifyAdmin, verifyToken, verifyUser} = require("../middleware/authMiddleware")
+const{verifyAdmin, verifyToken, verifyUser} = require("../middleware/authMiddleware")
 
 
 
@@ -21,4 +21,4 @@ router.put('/users/:id', verifyToken, verifyUser, updateUser);
 // Delete a user by ID
 router.delete('/users/:id', verifyToken, verifyUser, deleteUser);
 
-export default router;
+module.exports = router;

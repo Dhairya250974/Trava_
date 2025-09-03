@@ -21,6 +21,7 @@ const createReview = async (req, res) => {
         const tour = await Tour.findById(tourId);
         if (!tour) {
             return res.status(404).json({ 
+                success: false,
                 message: 'Tour not found' 
             });
         }
@@ -87,4 +88,6 @@ const deleteReview = async (req, res) => {
     }
 }
 
+
+module.exports = { createReview, deleteReview };
 

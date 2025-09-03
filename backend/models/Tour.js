@@ -55,4 +55,4 @@ const tourSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Tour", tourSchema);
+module.exports = mongoose.model("Tour", tourSchema);

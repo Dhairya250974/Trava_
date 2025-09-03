@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
 		"./index.html",
@@ -7,6 +8,8 @@ module.exports = {
 		extend: {
 			colors: {
 				BaseColor: "#B71C1C",
+				BHoverColor: "#8B0000",
+				GrayColor: "#6B7280",
 			},
 			fontFamily: {
 				cursiveFont: ["Satisfy", "cursive"],
