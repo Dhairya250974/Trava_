@@ -12,7 +12,7 @@ const createAdmin = async () => {
         console.log("Connected to database");
 
         // Find a user by email and update their role to admin
-        const userEmail = "snapshooters0@gmail.com"; // Change this to your desired admin email
+        const userEmail = "rana74.pahadan@gmail.com"; // Change this to your desired admin email
         
         const user = await User.findOne({ email: userEmail });
         
